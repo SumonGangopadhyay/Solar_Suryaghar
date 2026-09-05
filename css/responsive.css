@@ -1,0 +1,82 @@
+/* =========================================================
+   SOLAR SURYA GHAR — RESPONSIVE
+   Breakpoints: 1440 / 1280 / 1024 / 768 / 480 / 360
+   ========================================================= */
+
+/* ---------- ≤1280px : reduce container/section rhythm slightly ---------- */
+@media (max-width: 1280px) {
+  :root { --container-w: 1120px; }
+}
+
+/* ---------- ≤1024px : tablets — collapse to mobile nav, stack heavy grids ---------- */
+@media (max-width: 1024px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .navbar__actions .btn-primary { display: none; }
+
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__art { order: -1; max-width: 420px; margin-inline: auto; }
+
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-6 { grid-template-columns: repeat(3, 1fr); }
+
+  .timeline { grid-template-columns: repeat(2, 1fr); }
+
+  .calculator { grid-template-columns: 1fr; }
+
+  .solution-block { grid-template-columns: 1fr; }
+  .solution-block__art { order: -1; }
+
+  .footer__top { grid-template-columns: 1fr 1fr; row-gap: var(--space-4); }
+}
+
+/* ---------- ≤768px : phones (landscape / large) ---------- */
+@media (max-width: 768px) {
+  :root { --space-6: 3rem; --space-7: 4.5rem; }
+
+  .section { padding-block: var(--space-5); }
+
+  .grid-4, .grid-3, .grid-6 { grid-template-columns: repeat(2, 1fr); }
+  .timeline { grid-template-columns: 1fr; }
+
+  .hero__indicators { gap: var(--space-3); }
+
+  .footer__top { grid-template-columns: 1fr 1fr; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; }
+
+  .mobile-action-bar { display: block; }
+  body { padding-bottom: 78px; }
+  .whatsapp-float { bottom: 92px; }
+
+  .blog-toolbar { flex-direction: column; align-items: stretch; }
+  .blog-search { min-width: 0; }
+}
+
+/* ---------- ≤480px : standard phones ---------- */
+@media (max-width: 480px) {
+  .grid-4, .grid-3, .grid-6, .grid-2 { grid-template-columns: 1fr; }
+  .footer__top { grid-template-columns: 1fr; }
+
+  .hero { padding-block: var(--space-6) var(--space-5); }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; }
+
+  .calculator__form, .calculator__results { padding: var(--space-3); }
+  .field--radio-group { flex-direction: column; }
+
+  .mobile-action-bar__inner { grid-template-columns: 1fr 1fr 1.2fr; gap: 0.4rem; }
+  .mobile-action-bar span.label-full { display: none; }
+}
+
+/* ---------- ≤360px : small Android phones ---------- */
+@media (max-width: 360px) {
+  .container { padding-inline: var(--space-2); }
+  .navbar__inner { padding-inline: var(--space-2); }
+  .brand { font-size: 1rem; }
+}
+
+/* ---------- ≥1440px : large monitors — cap growth, add breathing room ---------- */
+@media (min-width: 1440px) {
+  :root { --container-w: 1320px; }
+}
